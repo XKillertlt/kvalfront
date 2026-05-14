@@ -3,7 +3,7 @@ let requests = {}
 async function getRequest() {
     try {
         const user = JSON.parse(localStorage.getItem('user'))
-        const res = await fetch(`https://kval-backend.onrender.com/request?users_id=${user.users_id}`, {
+        const res = await fetch(`https://backendkval.onrender.com/request?users_id=${user.users_id}`, {
             method: 'GET',
         });
 
@@ -97,7 +97,7 @@ async function newReview() {
     }
 
     try {
-        const res = await fetch('https://kval-backend.onrender.com/review', {
+        const res = await fetch('https://backendkval.onrender.com/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
